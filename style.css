@@ -250,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .why-us .section-header h2 {
-    color: var(--white);
+    color: var(--amber);
 }
 
 .product-grid {
@@ -308,7 +308,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* 5. WHY CHOOSE US */
 .why-us {
-    background: linear-gradient(135deg, var(--amber) 0%, #d48b11 100%);
+    background-color: var(--navy-bg);
+    background-image: radial-gradient(circle at 50% -20%, rgba(232, 160, 32, 0.15), transparent 70%);
     padding: 100px 0;
     color: var(--white);
 }
@@ -320,25 +321,43 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .feature-box {
-    background-color: var(--white);
-    color: var(--navy-bg);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--light-text);
     padding: 40px 30px;
     border-radius: 15px;
     text-align: center;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s ease, border-color 0.4s ease, background 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: var(--amber);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.feature-box:hover::before {
+    transform: scaleX(1);
 }
 
 .feature-box:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(232, 160, 32, 0.3);
 }
 
 .feature-box .icon {
     color: var(--amber);
     margin-bottom: 20px;
-    background: rgba(232, 160, 32, 0.1);
+    background: transparent;
     width: 70px;
     height: 70px;
     border-radius: 50%;
@@ -347,6 +366,13 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    border: 2px dashed rgba(232, 160, 32, 0.3);
+    transition: transform 0.5s ease;
+}
+
+.feature-box:hover .icon {
+    transform: rotate(360deg);
+    border-style: solid;
 }
 
 .feature-box .icon svg {
@@ -359,10 +385,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 10px;
     font-family: var(--font-body);
     font-weight: 700;
+    color: var(--white);
 }
 
 .feature-box p {
-    color: #555;
+    color: #aaa;
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -530,8 +557,16 @@ button.btn-primary {
     }
     
     .navbar {
-        background: var(--navy-bg);
-        padding: 15px 0;
+        background: transparent;
+        padding: 10px 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 1.4rem;
     }
 
     .hero h1 {
