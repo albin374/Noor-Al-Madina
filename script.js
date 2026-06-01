@@ -88,3 +88,23 @@ function validateForm(event) {
     document.getElementById('contactForm').reset();
     return false;
 }
+
+// FAQ Accordion Logic
+const faqQuestions = document.querySelectorAll('.faq-question');
+if (faqQuestions) {
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const item = question.parentElement;
+            
+            // Close all other open FAQs
+            document.querySelectorAll('.faq-item').forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.classList.remove('active');
+                }
+            });
+
+            // Toggle current FAQ
+            item.classList.toggle('active');
+        });
+    });
+}
