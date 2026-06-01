@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Noor Al Madina</title>
+    <meta name="description" content="Learn more about Noor Al Madina, a trusted global supplier of premium plastic materials.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-page-hero {
+            height: 50vh;
+            min-height: 400px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+        .about-page-hero .video-container {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -2;
+        }
+        .about-page-hero video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .about-page-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(13, 13, 26, 0.6);
+            z-index: -1;
+        }
+        .about-page-hero h1 {
+            color: var(--white);
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            z-index: 1;
+        }
+        .about-page-hero p {
+            color: var(--amber);
+            font-size: 1.2rem;
+            font-weight: 500;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Noor Al Madina</a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="about.html" style="color: var(--amber);">About</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PAGE HERO WITH VIDEO -->
+    <section class="about-page-hero">
+        <div class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="media/banner2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="about-page-overlay"></div>
+        <div>
+            <h1>About Us</h1>
+            <p>Your Trusted Partner in Global Plastic Trading</p>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img-col">
+                    <div class="about-img">
+                        <!-- Placeholder for image -->
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Noor Al Madina is a leading global supplier of premium virgin and recycled plastic materials. With a strong commitment to quality and sustainability, we bridge the gap between trusted manufacturers and high-demand markets. We provide comprehensive trading solutions, ensuring reliable supply chains for diverse industrial applications worldwide.</p>
+                    <div class="stats" id="stats">
+                        <div class="stat-item">
+                            <h3 data-target="15">0</h3>
+                            <span>+ Years</span>
+                        </div>
+                        <div class="stat-item">
+                            <h3 data-target="200">0</h3>
+                            <span>+ Products</span>
+                        </div>
+                        <div class="stat-item">
+                            <h3 data-target="500">0</h3>
+                            <span>+ Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Noor Al Madina</h3>
+                <p>Premium Plastic Materials — Delivered with Trust</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html#home">Home</a>
+                <a href="about.html">About</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">WhatsApp</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Noor Al Madina. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
